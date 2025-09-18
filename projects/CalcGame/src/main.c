@@ -7,7 +7,7 @@ int main() {
     Bdisp_EnableColor(1);
     int key;
     Bdisp_Fill_VRAM(COLOR_CYAN, 3);
-    DrawFrame(COLOR_CYAN);//outline border
+    DrawFrame(COLOR_CYAN);
     Bdisp_PutDisp_DD();
     while (1) {
         

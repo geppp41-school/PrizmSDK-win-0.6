@@ -1,0 +1,7 @@
+run 
+
+sudo apt install xz-utils
+
+tar xf wine-10.15.tar.xz
+
+read README in the wine directory
