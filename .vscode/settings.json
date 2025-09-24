@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "keyboard.h": "c"
+        "keyboard.h": "c",
+        "DOOMNET.C": "cpp"
     },
     "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
         "clang-diagnostic-error"
