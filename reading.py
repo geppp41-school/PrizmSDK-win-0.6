@@ -18,7 +18,7 @@ fileNameSizeBytes = 8
 
 type:bytearray = str(file.read(4)).replace("b", "").replace("\'", "")
 print(f"Type: {type}    Memory usage: {sys.getsizeof(type)}")
-file.seek(4)#moves start to position 4
+file.seek(typeSizeBytes, 1)#increases target position
 #target, whence
 #0 <= whence <= 2
 #whence = 0   |   relative to start of file    also default
@@ -29,7 +29,7 @@ numLumps:int = get_lsb_int(file.read(numLumpsSizeBytes)) #get least significant 
 #all ints in doom wad files will be stored as a lsb and are 4 byets long
 print(f"Number of Lumps: {numLumps}   Memory usage: {sys.getsizeof(numLumps)}")
 
-file.seek(4, 1)
+file.seek(numLumpsSizeBytes, 1)
 directoryPos = get_lsb_int(file.read(directoryLocationSizeBytes))#relative to start of file
 print(f"Directory Offset: {directoryPos}   Memory usage: {sys.getsizeof(directoryPos)}")
 
